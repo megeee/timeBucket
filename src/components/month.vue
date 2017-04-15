@@ -26,24 +26,13 @@ export default {
             let _this = this;
             //获取某月最后一天的日期
             let getLastDay = function(year,month) {
-                //取当前的年份
-                let new_year = year,
-                    //取下一个月的第一天，方便计算（最后一天不固定）
-                    new_month = month++;
-                if(month>12) {
-                    new_month -=12;
-                    new_year++;
-                }
-                //取当年当月中的第一天
-                let new_date = new Date(new_year,new_month,1);
-                //获取当月最后一天日期
-                return (new Date(new_date.getTime()-1000*60*60*24)).getDate();
+                return new Date(year,month,0).getDate()
             };
             //日期格式化
             let formatDate = function(date){
-                let year = date.getFullYear()+'-';
-                let month = (date.getMonth()+1) < 10 ? '0' + (date.getMonth()+1) + '-' : (date.getMonth()+1) + '-';
-                let day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+                let year = date.getFullYear()+'-',
+                    month = (date.getMonth()+1) < 10 ? '0' + (date.getMonth()+1) + '-' : (date.getMonth()+1) + '-',
+                    day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
                 return year+month+day;
             };
             //输出
@@ -57,8 +46,8 @@ export default {
             };
             //切换月份方法
             let changeMonth = function(n){
-                let now = new Date();
-                let lastMonth = new Date( now.getFullYear(), now.getMonth()+n, now.getDate() );
+                let now = new Date(),
+                    lastMonth = new Date( now.getFullYear(), now.getMonth()+n, now.getDate() );
                 return lastMonth;
             };
 
