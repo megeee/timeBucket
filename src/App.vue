@@ -1,7 +1,7 @@
 <template>
     <div>
         <month-Select :changeSegment="changeDate"></month-Select>
-        <week-Select :changeSegment="changeDate"></week-Select>
+        <week-Select :changeSegment="changeDate" :maxDay="new Date()"></week-Select>
     </div>
 </template>
 
@@ -10,7 +10,7 @@ import monthSelect from './components/month'
 import weekSelect from './components/week'
 export default {
     methods:{
-        //回调选择的月份段
+        //回调选择的时间段
         changeDate(val){
             console.log(val) //["2016-03-01","2016-03-31"]
         }

@@ -50,7 +50,6 @@ export default {
                     lastMonth = new Date( now.getFullYear(), now.getMonth()+n, now.getDate() );
                 return lastMonth;
             };
-
             let Export = {};
             //初始化
             Export.init = function(now){
@@ -79,5 +78,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
