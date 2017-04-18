@@ -18,7 +18,7 @@ export default {
     },
     props: {
         changeSegment: { type: Function },
-        maxDay:"" //最大可选日期
+        maxDay:"" //最大可选日期，留空即不限制范围
     },
     methods : {
         dataSegment () {  //获取时间段数据
