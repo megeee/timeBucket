@@ -79,23 +79,5 @@ export default {
 </script>
 
 <style scoped>
-    .time_bucket{
-        height: 45px;
-        display: flex;
-        justify-content:space-between;
-        align-items:center;
-        background: #1D8CE0;
-        color: #fff;
-    }
-    .time_bucket > div{
-        line-height: 45px;
-        padding: 0 10px
-    }
-    .time_bucket > div:active{
-        background: #2c94e2
-    }
-    .time_bucket .none{
-        pointer-events: none;
-        color: #ccc
-    }
+
 </style>
